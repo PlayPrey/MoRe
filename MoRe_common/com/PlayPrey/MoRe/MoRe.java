@@ -2,10 +2,13 @@ package com.PlayPrey.MoRe;
 
 import java.io.File;
 
+import net.minecraft.creativetab.CreativeTabs;
+
 import com.PlayPrey.MoRe.block.ModBlocks;
 import com.PlayPrey.MoRe.config.ConfigurationHandler;
 import com.PlayPrey.MoRe.core.handler.LocalizationHandler;
 import com.PlayPrey.MoRe.core.proxy.CommonProxy;
+import com.PlayPrey.MoRe.item.ModItems;
 import com.PlayPrey.MoRe.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -42,19 +45,22 @@ public class MoRe
 	)
 	public static CommonProxy proxy;
 	
+	public static CreativeTabs TabMoRe = new com.PlayPrey.MoRe.creativetabs.TabMoRe(CreativeTabs.getNextID(), Reference.MOD_ID);	
 	@PreInit
 	public void preInit (FMLPreInitializationEvent event)
 	{
+		ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+
 		ModBlocks.BlocksInit();
+		ModItems.ItemInit();
 		
 		LocalizationHandler.loadLanguages();
 		
-		ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
 	}
 	@Init
 	public void init (FMLInitializationEvent event)
 	{
-		
+
 	}
 	@PostInit
 	public void postInit (FMLPostInitializationEvent event)

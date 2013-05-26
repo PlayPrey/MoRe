@@ -10,5 +10,8 @@ public class LocalizationHandler {
 		for(String LocationFile: Localizations.localeFiles){
 			LanguageRegistry.instance().loadLocalization(LocationFile, LocalizationHelper.getLocaleFromFileName(LocationFile), LocalizationHelper.isXMLLanguageFile(LocationFile));
 		}
+		for(String LocationFile: Localizations.localeFiles2){
+			LanguageRegistry.instance().loadLocalization(LocationFile, LocalizationHelper.getLocaleFromFileName(LocationFile), LocalizationHelper.isXMLLanguageFile(LocationFile));
+		}
 	}
 }

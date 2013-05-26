@@ -2,7 +2,6 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
-	<entry key="tile.dc.name">Diamond Reed</entry>
-	<entry key="item.di.name">Diamond Nugget</entry>
-	<entry key="itemGroup.MoRe">Mo'Reeds</entry>
+	<entry key="tile.dc.name">Diamant Stang</entry>
+	<entry key="item.di.name">Diamant Tann</entry>
 </properties>
