@@ -53,6 +53,7 @@ public class MoRe
 
 		ModBlocks.BlocksInit();
 		ModItems.ItemInit();
+		ModItems.recipesInit();
 		
 		LocalizationHandler.loadLanguages();
 		
